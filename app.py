@@ -108,14 +108,19 @@ if dark_mode:
             background-color: #4338ca !important;
         }
         
-        [data-testid="stUploadedFile"] {
-            background: rgba(15, 23, 42, 0.8) !important;
+        [data-testid="stUploadedFile"], [data-testid="stUploadedFile"] > div {
+            background-color: rgba(15, 23, 42, 0.8) !important;
             border: 1px solid rgba(99, 102, 241, 0.2) !important;
             border-radius: 8px !important;
+            color: #cbd5e1 !important;
         }
         
-        [data-testid="stUploadedFile"] * {
+        [data-testid="stUploadedFile"] span, [data-testid="stUploadedFile"] p, [data-testid="stUploadedFile"] small, [data-testid="stUploadedFile"] div {
             color: #cbd5e1 !important;
+        }
+        
+        [data-testid="stUploadedFile"] svg {
+            fill: #cbd5e1 !important;
         }
         
         div[data-baseweb="popover"] * {
@@ -336,6 +341,111 @@ if dark_mode:
             color: #34d399 !important;
             box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1) !important;
         }
+
+        .pipeline-container {
+            margin-top: 20px;
+        }
+        
+        .pipeline-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #f1f5f9 !important;
+            margin-bottom: 12px !important;
+        }
+        
+        .pipeline-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .pipeline-icon {
+            font-size: 16px;
+        }
+        
+        .pipeline-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pipeline-text strong {
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+        
+        .pipeline-text span {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .info-card {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .info-card-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+        
+        .info-card-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+        
+        .info-card-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-card-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        
+        .info-card-value {
+            font-size: 13px;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+        
+        .text-monospace {
+            font-family: monospace !important;
+            font-size: 12px !important;
+            color: #818cf8 !important;
+        }
+        
+        .class-badge {
+            background: rgba(99, 102, 241, 0.1);
+            color: #818cf8;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+        
+        .conf-badge {
+            background: rgba(16, 185, 129, 0.1);
+            color: #34d399;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -398,7 +508,7 @@ else:
         }
         
         [data-testid="stFileUploaderDropzone"] * {
-            color: #64748b !important;
+            color: #475569 !important;
         }
         
         [data-testid="stFileUploaderDropzone"] button {
@@ -414,14 +524,18 @@ else:
             background-color: #4338ca !important;
         }
         
-        [data-testid="stUploadedFile"] {
-            background: #ffffff !important;
+        [data-testid="stUploadedFile"], [data-testid="stUploadedFile"] > div {
+            background-color: #f8fafc !important;
             border: 1px solid #cbd5e1 !important;
-            border-radius: 8px !important;
+            color: #1e293b !important;
         }
         
-        [data-testid="stUploadedFile"] * {
+        [data-testid="stUploadedFile"] span, [data-testid="stUploadedFile"] p, [data-testid="stUploadedFile"] small, [data-testid="stUploadedFile"] div {
             color: #1e293b !important;
+        }
+        
+        [data-testid="stUploadedFile"] svg {
+            fill: #4f46e5 !important;
         }
         
         div[data-baseweb="popover"] * {
@@ -565,7 +679,7 @@ else:
         .stTabs [data-baseweb="tab"] {
             padding: 10px 20px !important;
             font-weight: 700 !important;
-            color: #64748b !important;
+            color: #475569 !important;
             background: transparent !important;
             border: none !important;
             border-radius: 8px !important;
@@ -639,6 +753,111 @@ else:
             border: 1px solid #4ac26b !important;
             color: #1a7f37 !important;
         }
+
+        .pipeline-container {
+            margin-top: 20px;
+        }
+        
+        .pipeline-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1e293b !important;
+            margin-bottom: 12px !important;
+        }
+        
+        .pipeline-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .pipeline-icon {
+            font-size: 16px;
+        }
+        
+        .pipeline-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pipeline-text strong {
+            font-size: 12px;
+            color: #1e293b;
+        }
+        
+        .pipeline-text span {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border: 1px solid rgba(148, 163, 184, 0.15);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+        }
+        
+        .info-card-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            padding-bottom: 8px;
+        }
+        
+        .info-card-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.05);
+        }
+        
+        .info-card-row:last-child {
+            border-bottom: none;
+        }
+        
+        .info-card-label {
+            font-size: 13px;
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        .info-card-value {
+            font-size: 13px;
+            color: #1e293b;
+            font-weight: 600;
+        }
+        
+        .text-monospace {
+            font-family: monospace !important;
+            font-size: 12px !important;
+            color: #4f46e5 !important;
+        }
+        
+        .class-badge {
+            background: rgba(79, 70, 229, 0.05);
+            color: #4f46e5;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(79, 70, 229, 0.1);
+        }
+        
+        .conf-badge {
+            background: rgba(16, 185, 129, 0.05);
+            color: #059669;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -672,12 +891,47 @@ with st.sidebar:
     )
     st.divider()
     st.markdown(
-        "### Operational Pipeline\n"
-        "1. **Header Parsing**: Mitigations & Imports\n"
-        "2. **Entropy Map**: High-entropy target search\n"
-        "3. **De-Obfuscation**: 1-byte & 2-byte XOR + B64/ROT13\n"
-        "4. **Threat Mapping**: MITRE ATT&CK Matrix\n"
-        "5. **YARA Generation**: Compiles indicator rules"
+        """
+        <div class="pipeline-container">
+            <h3 class="pipeline-title">Operational Pipeline</h3>
+            <div class="pipeline-item">
+                <div class="pipeline-icon">🔍</div>
+                <div class="pipeline-text">
+                    <strong>1. Header Parsing</strong>
+                    <span>Mitigations & Imports</span>
+                </div>
+            </div>
+            <div class="pipeline-item">
+                <div class="pipeline-icon">📊</div>
+                <div class="pipeline-text">
+                    <strong>2. Entropy Map</strong>
+                    <span>High-entropy target search</span>
+                </div>
+            </div>
+            <div class="pipeline-item">
+                <div class="pipeline-icon">🔓</div>
+                <div class="pipeline-text">
+                    <strong>3. De-Obfuscation</strong>
+                    <span>XOR & Rot13 payloads</span>
+                </div>
+            </div>
+            <div class="pipeline-item">
+                <div class="pipeline-icon">🛡️</div>
+                <div class="pipeline-text">
+                    <strong>4. Threat Mapping</strong>
+                    <span>MITRE ATT&CK Matrix</span>
+                </div>
+            </div>
+            <div class="pipeline-item">
+                <div class="pipeline-icon">✍️</div>
+                <div class="pipeline-text">
+                    <strong>5. YARA Gen</strong>
+                    <span>Indicator rule builder</span>
+                </div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
     )
 
 # ---------------------------------------------------------------------------
@@ -1017,11 +1271,11 @@ if uploaded_file is not None:
                     domain = {'x': [0, 1], 'y': [0, 1]},
                     title = {'text': "Calculated Threat Index", 'font': {'size': 16, 'color': call_graph_text_color}},
                     gauge = {
-                        'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "gray"},
+                        'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': call_graph_text_color, 'tickfont': {'color': call_graph_text_color}},
                         'bar': {'color': "#f85149" if risk_score > 70 else ("#d29922" if risk_score > 40 else "#3fb950")},
                         'bgcolor': "rgba(0,0,0,0)",
                         'borderwidth': 2,
-                        'bordercolor': "gray",
+                        'bordercolor': call_graph_text_color,
                         'steps': [
                             {'range': [0, 40], 'color': 'rgba(63, 185, 80, 0.15)'},
                             {'range': [40, 70], 'color': 'rgba(210, 153, 34, 0.15)'},
@@ -1043,9 +1297,20 @@ if uploaded_file is not None:
             # Profile & Threat Intel Row
             col_prof, col_intel = st.columns(2)
             with col_prof:
-                st.subheader("Classification Profile")
-                st.markdown(f"**Triage Class:** `{behavior_profile['class']}`")
-                st.markdown(f"**Confidence Rating:** `{behavior_profile['confidence']}`")
+                profile_html = f"""
+                <div class="info-card">
+                    <div class="info-card-header">📊 Classification Profile</div>
+                    <div class="info-card-row">
+                        <span class="info-card-label">Triage Class</span>
+                        <span class="info-card-value class-badge">{behavior_profile['class']}</span>
+                    </div>
+                    <div class="info-card-row">
+                        <span class="info-card-label">Confidence Rating</span>
+                        <span class="info-card-value conf-badge">{behavior_profile['confidence']}</span>
+                    </div>
+                </div>
+                """
+                st.markdown(profile_html, unsafe_allow_html=True)
                 st.caption("Inferred from matching behavioral combinations of ATT&CK tactics.")
 
             with col_intel:
@@ -1059,14 +1324,28 @@ if uploaded_file is not None:
             st.divider()
 
             # File Info
-            st.subheader("File Metadata")
-            m1, m2 = st.columns(2)
-            with m1:
-                st.markdown(f"**Filename:** `{analysis['filename']}`")
-                st.markdown(f"**File Size:** {analysis['file_size']:,} bytes")
-            with m2:
-                st.markdown(f"**MD5:** `{analysis['file_hash_md5']}`")
-                st.markdown(f"**SHA-256:** `{analysis['file_hash_sha256']}`")
+            metadata_html = f"""
+            <div class="info-card">
+                <div class="info-card-header">📁 File Metadata</div>
+                <div class="info-card-row">
+                    <span class="info-card-label">Filename</span>
+                    <span class="info-card-value text-monospace">{analysis['filename']}</span>
+                </div>
+                <div class="info-card-row">
+                    <span class="info-card-label">File Size</span>
+                    <span class="info-card-value">{analysis['file_size']:,} bytes</span>
+                </div>
+                <div class="info-card-row">
+                    <span class="info-card-label">MD5 Hash</span>
+                    <span class="info-card-value text-monospace">{analysis['file_hash_md5']}</span>
+                </div>
+                <div class="info-card-row">
+                    <span class="info-card-label">SHA-256 Hash</span>
+                    <span class="info-card-value text-monospace">{analysis['file_hash_sha256']}</span>
+                </div>
+            </div>
+            """
+            st.markdown(metadata_html, unsafe_allow_html=True)
 
         # -------------------------------------------------------------------
         # TAB 2: Entropy Map
@@ -1100,6 +1379,7 @@ if uploaded_file is not None:
                     template=plotly_template,
                     paper_bgcolor='rgba(0,0,0,0)',
                     plot_bgcolor='rgba(0,0,0,0)',
+                    font={'color': call_graph_text_color},
                     height=400,
                 )
                 st.plotly_chart(fig, use_container_width=True)
